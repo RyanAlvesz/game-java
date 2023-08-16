@@ -29,21 +29,21 @@ public class Register {
 
         output.MostrarPlayer(player);
         output.MostrarEnemy(enemy);
-        
+
     }
 
     public void RegistrarPlayer(){
 
         // Coleta dados
 
-        System.out.println("--------- Cadastro Jogador --------");
+        System.out.println("---------- Cadastro Jogador ----------");
 
         System.out.print("Qual é o seu nome: ");
         player.name = keyboard.nextLine();
         System.out.print("Selecione sua Skin [Red - Blue - Green]: ");
         player.skin = keyboard.nextLine();
 
-        System.out.println("--- Player cadastrado com sucesso ---");
+        System.out.println("--- Jogador cadastrado com sucesso ---");
         System.out.println("");
 
         if(ambos == 1){
@@ -57,14 +57,14 @@ public class Register {
 
         // Coleta dados
 
-        System.out.println("--------- Cadastro Inimigo ---------");
+        System.out.println("----------- Cadastro Inimigo -----------");
 
         System.out.print("Qual é o seu nome: ");
         enemy.name = keyboard.nextLine();
         System.out.print("Selecione sua Skin [Red - Blue - Green]: ");
         enemy.skin = keyboard.nextLine();
 
-        System.out.println("--- Enemy cadastrado com sucesso ---");
+        System.out.println("--- Inimigo cadastrado com sucesso ---");
         System.out.println("");
 
         if(ambos == 1){
@@ -84,26 +84,35 @@ public class Register {
         System.out.println("");
 
 
-        switch (resposta){
+        switch (resposta.toLowerCase()){
 
-            case "Jogador":
+            case "jogador":
                 RegistrarPlayer();
                 break;
 
-            case "Inimigo":
+            case "inimigo":
                 RegistrarEnemy();
                 break;
 
-            case "Ambos":
+            case "ambos":
                 RegistrarAmbos();
                 break;
+        }
 
-            default:
-                System.out.println("Escolha uma opção válida");
-                System.out.println();
+        System.out.println("");
+        System.out.println("Deseja retornar ao cadastro? (Sim/Não)");
+        String respostaCadastro = keyboard.nextLine();
+
+        System.out.println("");
+
+        switch(respostaCadastro.toLowerCase()){
+
+            case "sim":
                 Decision();
+                break;
 
         }
+
 
     }
 
