@@ -16,11 +16,11 @@ public class Register {
     // Instancia Output
     Output output= new Output();
 
-    int ambos = 0;
+    int ambos = 1;
 
     public void RegistrarAmbos(){
 
-        ambos = 1;
+        ambos = 0;
 
         // Coleta dados
         RegistrarPlayer();
@@ -32,7 +32,7 @@ public class Register {
 
     }
 
-    public void RegistrarPlayer(){
+    public Player RegistrarPlayer(){
 
         // Coleta dados
 
@@ -47,13 +47,13 @@ public class Register {
         System.out.println("");
 
         if(ambos == 1){
-            return;
+            output.MostrarPlayer(player);
         }
 
-        output.MostrarPlayer(player);
+        return player;
 
     }
-    public void RegistrarEnemy(){
+    public Enemy RegistrarEnemy(){
 
         // Coleta dados
 
@@ -68,10 +68,10 @@ public class Register {
         System.out.println("");
 
         if(ambos == 1){
-            return;
+            output.MostrarEnemy(enemy);
         }
 
-        output.MostrarEnemy(enemy);
+        return enemy;
 
     }
 
