@@ -39,7 +39,7 @@ public class Menu {
 
                 case 2:
                     battle.ChoiceScenario();
-                    battle.Battle();
+                    battle.Battle(register.player, register.enemy);
                     break;
 
                 case 3:
